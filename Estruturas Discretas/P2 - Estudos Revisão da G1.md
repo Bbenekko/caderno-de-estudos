@@ -215,4 +215,28 @@ Também pode ser chamado de **casado**!
 
 ## Caminho aumentante:
 
-	
+![[Pasted image 20260622120339.png]]
+
+Por exemplos:
+![[Pasted image 20260622120431.png]]
+
+O caminho:  **de -> eg -> ga -> af -> fb** é um caminho aumentante!
+
+Porém: **de -> eg -> ga -> af -> fb -> bc -> cd** não é, pois repete nós, o que não o torna um caminho!
+
+## Teorema de Berge:
+
+![[Pasted image 20260622120917.png]]
+
+![[Pasted image 20260622120950.png]]
+
+## Emparelhamento perfeito:
+![[Pasted image 20260622121012.png]]
+
+![[Pasted image 20260622121024.png]]
+
+## Teorema de Hall:
+![[Pasted image 20260622121523.png]]
+
+![[Pasted image 20260622121534.png]]
+

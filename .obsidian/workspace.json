@@ -61,7 +61,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Procurar"
+              "title": "Search"
             }
           },
           {
@@ -71,7 +71,7 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Marcadores"
+              "title": "Bookmarks"
             }
           }
         ]
@@ -185,13 +185,20 @@
   },
   "active": "dcd538a32e14ea42",
   "lastOpenFiles": [
-    "Estruturas Discretas/imgs/Pasted image 20260621203055.png",
-    "Estruturas Discretas/imgs/Pasted image 20260621203851.png",
-    "Estruturas Discretas/imgs/Pasted image 20260621203915.png",
-    "Estruturas Discretas/P2 - Estudos Revisão da G1.md",
-    "Estruturas Discretas/imgs/Pasted image 20260621202828.png",
-    "Estruturas Discretas/imgs",
+    "Estruturas Discretas/anexos/Pasted image 20260622121534.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622121523.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622121024.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622121012.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622120950.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622120917.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622120431.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622120339.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622120336.png",
     "README.md",
+    "Estruturas Discretas/P2 - Estudos Revisão da G1.md",
+    "Estruturas Discretas/anexos/Pasted image 20260622115033.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622114901.png",
+    "Estruturas Discretas/anexos",
     "Sem título.md",
     "Estruturas Discretas"
   ]
