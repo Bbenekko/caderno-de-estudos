@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "f613775592ac0176",
+    "type": "split",
+    "children": [
+      {
+        "id": "e5d440a4384468f1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dcd538a32e14ea42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Estruturas Discretas/P2 - Estudos Revisão da G1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "P2 - Estudos Revisão da G1"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8fc16f2d2707e53d",
+    "type": "split",
+    "children": [
+      {
+        "id": "27f23d1f836e2821",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f60e12b31edf787e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a62bcdab1d50eeba",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "44663a5954fa78ab",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "02876b9d1c2aef2e",
+    "type": "split",
+    "children": [
+      {
+        "id": "20b17e07d89482d1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee0836c2213aa735",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Estruturas Discretas/P2 - Estudos.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para P2 - Estudos"
+            }
+          },
+          {
+            "id": "2f070e09e197806f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Estruturas Discretas/P2 - Estudos.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para P2 - Estudos"
+            }
+          },
+          {
+            "id": "4c3aff83ac103a19",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "e863e6af98c77c3b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "3239e63d8c6fb11f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Estruturas Discretas/P2 - Estudos.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de P2 - Estudos"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "dcd538a32e14ea42",
+  "lastOpenFiles": [
+    "Estruturas Discretas/imgs/Pasted image 20260621203055.png",
+    "Estruturas Discretas/imgs/Pasted image 20260621203851.png",
+    "Estruturas Discretas/imgs/Pasted image 20260621203915.png",
+    "Estruturas Discretas/P2 - Estudos Revisão da G1.md",
+    "Estruturas Discretas/imgs/Pasted image 20260621202828.png",
+    "Estruturas Discretas/imgs",
+    "README.md",
+    "Sem título.md",
+    "Estruturas Discretas"
+  ]
+}
