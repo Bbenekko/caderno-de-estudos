@@ -249,3 +249,38 @@ Porém: **de -> eg -> ga -> af -> fb -> bc -> cd** não é, pois repete nós, o 
 ### Exemplo:
 ![[Pasted image 20260622143443.png]]
 
+## Outras definições:
+![[Pasted image 20260622234323.png]]
+
+![[Pasted image 20260622234343.png]]
+
+## Corte:
+![[Pasted image 20260622234402.png]]
+![[Pasted image 20260622234520.png]]
+
+### Lema de corte:
+![[Pasted image 20260622234553.png]]
+
+![[Pasted image 20260622234625.png]]
+
+# Fluxo em Redes II
+---
+
+## Rede residual:
+![[Pasted image 20260622234759.png]]
+
+![[Pasted image 20260622234812.png]]
+![[Pasted image 20260622235006.png]]
+![[Pasted image 20260622235023.png]]
+
+![[Pasted image 20260622235040.png]]
+
+![[Pasted image 20260622235046.png]]
+![[Pasted image 20260622235057.png]]
+
+## Algoritmo de Ford-Fulkerson
+
+![[Pasted image 20260622235124.png]]
+
+![[Pasted image 20260622235143.png]]
+

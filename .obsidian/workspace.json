@@ -61,7 +61,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Procurar"
             }
           },
           {
@@ -71,7 +71,7 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "Marcadores"
             }
           }
         ]
@@ -185,20 +185,21 @@
   },
   "active": "dcd538a32e14ea42",
   "lastOpenFiles": [
-    "Estruturas Discretas/anexos/Pasted image 20260622143443.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622143222.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622121534.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622121523.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622121024.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622121012.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622120950.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622120917.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622120431.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622120339.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622120336.png",
-    "README.md",
-    "Estruturas Discretas/P2 - Estudos Revisão da G1.md",
+    "Estruturas Discretas/anexos/Pasted image 20260622235143.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622235124.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622235057.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622235046.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622235040.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622235023.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622235006.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622234812.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622234759.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622234625.png",
+    "Estruturas Discretas/anexos/Pasted image 20260622234553.png",
     "Estruturas Discretas/anexos",
+    "Estruturas Discretas/P2 - Estudos Revisão da G1.md",
+    "Estruturas Discretas/imgs",
+    "README.md",
     "Sem título.md",
     "Estruturas Discretas"
   ]
