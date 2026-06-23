@@ -240,3 +240,12 @@ Porém: **de -> eg -> ga -> af -> fb -> bc -> cd** não é, pois repete nós, o 
 
 ![[Pasted image 20260622121534.png]]
 
+
+# Fluxo em redes
+---
+## Definição:
+![[Pasted image 20260622143222.png]]
+
+### Exemplo:
+![[Pasted image 20260622143443.png]]
+
