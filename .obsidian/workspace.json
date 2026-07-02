@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e5d440a4384468f1",
+        "id": "b48f9b0b7251049a",
         "type": "tabs",
         "children": [
           {
-            "id": "dcd538a32e14ea42",
+            "id": "3042b10badec7acb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Estruturas Discretas/P2.md",
+                "file": "chines/P2.md",
                 "mode": "source",
                 "source": false
               },
@@ -183,21 +183,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "dcd538a32e14ea42",
+  "active": "3042b10badec7acb",
   "lastOpenFiles": [
-    "Estruturas Discretas/anexos/Pasted image 20260622235143.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622235124.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622235057.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622235046.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622235040.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622235023.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622235006.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622234812.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622234759.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622234625.png",
-    "Estruturas Discretas/anexos/Pasted image 20260622234553.png",
-    "Estruturas Discretas/anexos",
+    "chines/anexos/Pasted image 20260701033129.png",
+    "chines/anexos/Pasted image 20260701033123.png",
+    "chines/anexos/Pasted image 20260701033120.png",
+    "chines/anexos/Pasted image 20260701033113.png",
+    "chines/anexos/Pasted image 20260701033106.png",
+    "chines/anexos/Pasted image 20260701033101.png",
+    "chines/anexos/Pasted image 20260701033049.png",
+    "chines/anexos/Pasted image 20260701033032.png",
+    "chines/anexos/Pasted image 20260701033020.png",
+    "chines/anexos/Pasted image 20260701033015.png",
+    "chines/anexos/Pasted image 20260701033007.png",
+    "chines/anexos",
     "Estruturas Discretas/P2.md",
+    "chines/P2.md",
+    "chines",
+    "Estruturas Discretas/anexos",
     "Estruturas Discretas/imgs",
     "README.md",
     "Sem título.md",
