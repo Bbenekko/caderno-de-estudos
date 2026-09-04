@@ -153,3 +153,87 @@ $$
 ==PERDI PERDI PERDI==
 
 ## Exemplo 3
+
+# Aula 4
+
+## Circuitos de 2a Ordem
+### Solução Homogênea
+
+(insira gráfico)
+
+$$
+y(t) = k_1 e^{\lambda_1 t} +k_2e^{\lambda_2}t
+$$
+(insira gráfico)
+
+$$
+y(t) = (k_1+k_2t)e^{\lambda t}
+$$
+
+(insira gráfico)
+
+$$
+\begin{align*}
+y(t) = e^{\alpha t}(k_1 cos (\omega_d) t + 
+k_2 sen (\omega_d) t) \\
+\alpha = \Re \{ \lambda _{1,2} \} \\
+\omega_d = | \Im \{ \lambda_{1,2} \}|
+\end{align*}
+$$
+#### Exemplos:
+
+##### 1
+
+(insira circuito)
+
+$$
+\begin{align*}
+t_s = 10 ms \\
+t_s' = 100ms
+\end{align*}
+$$
+###### (a) Valor de c?
+
+(foto do quadro)
+
+###### (b) Tipo de amortecimento quando L é inserido?
+
+(foto do quadro)
+
+**Solução Homogênea: fonte desligada**
+
+(inserir foto do quadro)
+
+*OBS: Sabemos a tensão e usaremos isso para encontrar a tensão em relação a corrente, para achar a corrente ( e o sentido dela).*
+
+*OBS: anotar a fórmula na box (polinômio característico RLC paralelo) para por na folha de cola!!*
+
+**Ver mais sobre em [[Notas importante]]**
+
+(inserir foto ( a partir de: *Comparação: RLC série*))
+
+**Ver mais sobre em [[Notas importante]]**
+(Inserir foto)
+
+Conclusão: **Superamortecido!**
+###### (c) $\lambda_1 = 1/20 = 0,05$
+
+$$
+\begin{align*}
+| - \frac{1}{2RC} + \frac{1}{2} \sqrt{(\frac{1}{RC})^2- \frac{4}{LC}}| = 0,05 \\
+\frac{1}{2*2*10^{-3}}-\frac{1}{2} \sqrt{(\frac{1}{2*10^{-3}})^2 - \frac{4}{L*2*10^{-5}}} = 0,05 \\
+L = ...
+\end{align*}
+$$
+##### 2
+
+(inserir foto do circuito)
+
+$$
+i(t) = 12 \ u_{-1}(-t)
+$$
+**Calcule $v_c(t) , t \ge 0$ :**
+
+
+(inserir imagem)
+
