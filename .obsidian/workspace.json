@@ -4,49 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "df62bb8c19b4de1d",
+        "id": "314c5fa2f1029d6e",
         "type": "tabs",
         "children": [
           {
-            "id": "9ad3e1efe74e96bf",
+            "id": "0c88a892ccd55082",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Circuitos 2/Notas importante.md",
+                "file": "Arquitetura de computadores/Estudos G1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Notas importante"
-            }
-          },
-          {
-            "id": "b6f26776719cea62",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Circuitos 2/Aulas.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Aulas"
-            }
-          },
-          {
-            "id": "a7c82b2b488f30c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Circuitos 2/O que preciso estudar.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "O que preciso estudar"
+              "title": "Estudos G1"
             }
           }
         ]
@@ -213,11 +185,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "9ad3e1efe74e96bf",
+  "active": "0c88a892ccd55082",
   "lastOpenFiles": [
+    "Circuitos 2/Notas importante.md",
+    "Arquitetura de computadores/Estudos G1.md",
+    "Arquitetura de computadores",
     "Circuitos 2/O que preciso estudar.md",
     "Circuitos 2/Aulas.md",
-    "Circuitos 2/Notas importante.md",
     "Circuitos 2/anexos",
     "Estruturas Discretas/P2.md",
     "Circuitos 2",
