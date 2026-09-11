@@ -154,6 +154,8 @@ $$
 
 ## Exemplo 3
 
+
+---
 # Aula 4
 
 ## Circuitos de 2a Ordem
@@ -236,4 +238,59 @@ $$
 
 
 (inserir imagem)
+
+---
+# Aula 5 - Circuitos de Segunda ordem
+
+## Solução Particular
+
+(inserir circuito)
+
+**(a)** Calcule
+$$
+H(s) = \frac{I_{R1}(s)}{V_i(s)}
+$$
+**(b)** Considerando
+$$
+R_1 = 100 \ohm \ ; C = 100 \micro F \ ; L = 10mH 
+$$
+calcule $R_2$ tal que o circuit oseja **criticamente amortecido**
+
+**(c)** Determine $i_{R1}(t)$, $t > 0$ , para a entrada abaixo
+
+(inserir gráfico)
+
+### Resolvendo:
+
+**(a):**
+
+(Inserir foto)
+
+**(b):**
+
+==(pegar caderno de alguem)==
+(inserir foto)
+
+**(c):**
+
+(inserir foto)
+
+## Questão 2
+
+(inserir foto do circuito)
+
+**(a)** Natureza de X1 e X2. Em qual deles foi medido $v_0(t)$?
+
+(Inserir foto)
+
+**(b):**
+
+(inserir foto)
+
+**(c)** Calcule o valor da constante $A$:
+
+(inserir foto)
+
+---
+# Aula 6 - Revisão P1
 
