@@ -624,3 +624,119 @@ Exemplo: PCI Bus
 	- Circuito mais complexo
 	- Redução de desempenho
 
+### Métodos de arbitragem
+
+Pode haver mais de um mestre de barramento potencial.
+**Ex:**
+- CPU e controlador de DMA.
+	- *DMA - Direct Memory Acessa*
+- Múltiplas CPUs num sistema de barramento compartilhado paralelo.
+
+Um mecanismo de **arbitragem** é necessário para garantir que apenas um mestre controle o barramento por vez
+
+Porque?
+
+![[Pasted image 20260914102758.png]]
+
+#### Centralizado
+
+Um **único** árbitro garante acesso ao barramento.
+
+![[Pasted image 20260914102838.png]]
+
+#### Distribuído
+
+- Cada módulo contém lógica de controle de acesso
+- módulos atuam juntos para compartilhar o barramento
+
+![[Pasted image 20260914102946.png]]
+
+- Dispositivos solicitantes ajustam **Bus request=0**.
+- Dispositivos solicitantes geram **Out=0**; não solicitantes geram **Out=In**.
+- Dispositivo solicitante com **In=1**, ganha o barramento.
+- Ele aguarda até que **Busy=1**, ajusta **Busy=0** e assume o controle.
+- Ao final, ele libera o barramento ajustando **Busy=1**.
+
+## Sincronização
+
+### Síncrono
+- Eventos determinador pelo sinal do clock
+- Barramento de controle inclui o clock
+- **Geralmente sincroniza na borda de subida**
+- Geralmente um único ciclo para um evento
+- Uma linha *READY/WAIT* sinaliza quando se espera que o acesso tenha finalizado
+
+- **Vantagens:**
+	- Implementação simples
+
+![[Pasted image 20260914103355.png]]
+
+
+| Símbolo  | Parametro                                         | Min | Max | Unidade |
+| -------- | ------------------------------------------------- | --- | --- | ------- |
+| $T_{ad}$ | Address output delay                              |     | 4   | nsec    |
+| $T_{ML}$ | Address stable prior to *MREQ*                    | 2   |     | nsec    |
+| $T_{M}$  | *MREQ* delay from falling edge of $\phi$ in $T_1$ |     | 3   | nsec    |
+| $T_{RL}$ | *RD* delay from falling edge of $\phi$ in $T_1$   |     | 3   | nsec    |
+| $T_{DS}$ | Data setup time prior to falling edge of $\phi$   | 2   |     | nsec    |
+| $T_{MH}$ | *MREQ* delay from falling edge of $\phi$ in $T_3$ |     | 3   | nsec    |
+| $T_{RH}$ | *RD* delay from falling edge of $\phi$ in $T_3$   |     | 3   | nsec    |
+| $T_{DH}$ | Data hold time from negation of *RD*              | 0   |     | nsec    |
+
+### Assíncrona
+
+- Sem sinal de clock
+- Depende da ocorrência dos eventos anteriores
+- Linhas de estado indicam que o acesso foi finalizado
+
+- **Vantagens:**
+	- Permite "ciclo fracionado"
+	- Não há tempo minimo de acesso
+	- Possibilita barramentos maiores (distorção clock)
+
+![[Pasted image 20260914104114.png]]
+
+---
+
+### Transferência de dados
+
+![[Pasted image 20260914104150.png]]
+
+
+## Problemas com barramentos
+
+### Problemas como barramentos únicos
+
+- Limitações de **Largura de Banda**:
+	- Todos os dispositivos compartilham o mesmo caminho de comunicação.
+	- Com mais dispositivos, menor a largura de banda disponível por dispositivo.
+	- **Gargalo no desempenho!!**
+
+- **Latência:**
+	- Os dispositivos muitas vezes devem esperar para acessar o barramento.
+	- A espera aumenta a latência, o que é particularmente problemático para aplicativos de alta velocidade ou de tempo real
+
+- Problemas de **escalabilidade:**
+	- Barramentos têm um limite físico e elétrico no número de dispositivos que podem ser conectados.
+	- Escalar sistemas sem afetar o desempenho ou a estabilidade é difícil.
+
+*Portanto, a maioria dos sistemas usa múltiplos barramentos para superar esses problemas...*
+
+### Problemas com barramentos paralelos
+
+**Clock skew** (Desvio de clock)
+- Fenômeno em circuitos síncronos
+- Sinal de clock chega a componentes diferentes em momentos diferentes
+
+- Possíveis causas:
+	- comprimento do fio;
+	- variação em dispositivos intermediários;
+	- acoplamento capacitivo;
+	- imperfeições do material;
+	- ...
+
+- À medida que a taxa de clock aumenta, menos variação pode ser tolerada
+- Isso impõe um **limite de taxa de clock** ao barramento paralelo
+
+## PCIe (Peripheral Component Interconnect Express)
+
