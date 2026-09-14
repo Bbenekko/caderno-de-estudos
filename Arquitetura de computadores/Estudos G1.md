@@ -494,3 +494,105 @@ Acredito que não caíram, mas caso apareça, é no slide 4, pág. 61
 
 # Estruturas de Interconexão
 
+## Tipos de Unidades
+
+### Processador
+
+- Lê instruções e dados
+- Escreve dados
+- Usa sinais de controle para controlar a operação geral do sistema
+- Recebe sinais de interrupção
+
+![[Pasted image 20260914003613.png]]
+
+### Memória
+
+- Normalmente, um módulo de memória consiste de **N** palavras do mesmo tamanho
+- Cada palavra recebe um endereço numérico **exclusivo**
+- Uma palavra de dados pode ser lida ou escrita na memória
+- A natureza da operação é indicada por sinais de controle de leitura e escrita
+- O local para a operação é especificado por um endereçõ
+
+![[Pasted image 20260914003918.png]]
+
+### Módulo de E/S (IO)
+
+- Existem duas operações: **leitura** e **escrita**
+- Um módulo de E/S pode controlar mais de um dispositivo externo
+- Cada interface para dispositivo externo pode ser vista como uma porta, contendo um endereço exclusivo
+- Existem caminhos de dados externos para a entrada e saída de dados de dispositivos externos
+- **Um módulo de E/S pode ser capaz de enviar sinais de interrupção ao processador**
+
+![[Pasted image 20260914004152.png]]
+
+## Tipos de Transferência
+
+- **Memória para processador:**
+	- processador lê uma instrução ou uma unidade de dados da memória.
+
+- **Processador para memória:**
+	- processador escreve uma unidade de dados na memória.
+
+- **E/S para processador:**
+	- processador lê dados de um dispositivo de E/S por meio de um módulo de E/S.
+
+- **Processador para E/S:**
+	- processador envia dados para o dispositivo de E/S.
+
+- **E/S de ==ou== para a memória:**
+		- um módulo de E/S tem permissão para trocar dados diretamente com a memória, sem passar pelo processador, usando o DMA (Direct Memory Access)
+
+## Estruturas de interconexão
+
+1. Estruturas de **barramento paralelo** e múltiplos barramentos paralelos.
+2. Estruturas de **interconexão ponto a ponto** com transferência de dados em pacotes.
+
+## Barramentos
+
+Um **barramento** *(bus)* é um caminho elétrico comum entre múltiplos dispositivos.
+
+![[Pasted image 20260914004715.png]]
+
+![[Pasted image 20260914004729.png]]
+
+---
+### Barramento de Dados
+
+- Transporta **dados** %%EU SEI KKKKKKKKKKKKKKKKKKKK%%
+	- *Não há diferença entre "dado" e "instrução" neste nível!*
+- A **largura de barramento** de dados determina a **quantidade de dados movidos** em um único acesso, por ex: *8*, *16*, *32*, *64 bits*
+
+![[Pasted image 20260914004953.png]]
+
+### Barramento de Endereço
+
+- Identifica a **origem** ou **destino** dos dados
+	- *Ex:* A *CPU* necessita ler uma instrução *(dado)* a partir de uma localização da memória.
+
+- A **largura de barramento de endereço** determina a capacidade de memória máxima do sistema
+	- *Ex:* Z80 possui barramento de endereço de 16-bit oferecendo 64k de espaço de endereço
+
+![[Pasted image 20260914005222.png]]
+
+### Barramento de Controle
+
+- Transporta informações de controle e sincronização
+
+- Linhas de controle típicas:
+	- **Escrita/Leitura de Memória**
+	- **Escrita/Leitura de E/S**
+	- **Requisição/ACK de interrupção**
+	- **Requisição/ACK de barramento**
+	- **Clock**
+	- **Reset**
+
+![[Pasted image 20260914005405.png]]
+
+### Arquitetura Típíca de barramento
+
+![[Pasted image 20260914005429.png]]
+
+### História dos barramentos
+
+Vou pular, slide 5
+
