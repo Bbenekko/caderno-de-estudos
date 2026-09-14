@@ -4,3 +4,6 @@ Meu caderno de estudos na plataforma obsidian, para eu poder acessar ele de qual
 ## Recomendações:
 - Template: Dracula Oficial
 - Lingua do obsidian: Inglês
+
+## Como fica quando está tudo certinho:
+![[Pasted image 20260914005710.png]]
