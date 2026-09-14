@@ -740,3 +740,57 @@ Um **único** árbitro garante acesso ao barramento.
 
 ## PCIe (Peripheral Component Interconnect Express)
 
+- Arquitetura **ponto-a-ponto** (Peer-to-Peer).
+- A comunicação flui através de um ou mais **pares de conexões**, unidirecionais, chamadas **lanes** (faixas).
+- Cada conexão de uma faixa utiliza sinalização diferencial com dois fios *(transmitindo o mesmo sinal com polaridades opostas)*, o que proporciona **alta imunidade a ruídos**.
+- Dispositivos PCIe se comunicam através de um link, que é construído a partir de um conjunto de uma ou mais faixas.
+- São permitidos links com 1, 2, 4, 8, 16, e 32 faixas.
+
+### Dispositivos PCIe
+
+![[Pasted image 20260914112129.png]]
+
+![[Pasted image 20260914121150.png]]
+
+### Evolução do PCIe
+
+Não vou transcrever, não parece muito necessário
+
+![[Pasted image 20260914121232.png]]
+
+### PCIe 6.0 com PAM4
+
+- Acima de uma certa frequência, o sinal não é estável a longas distâncias
+- Para dobrar a taxa de dados, o PCIe 6.0 adotou o PAM4.
+- PAM4 transmite 2 bits por intervalo unitário
+
+![[Pasted image 20260914121929.png]]
+
+## Protocolo de camadas PCIe
+
+### Physical
+
+- **Physical:** Consiste nos fios reais que transportam os sinais, bem como nos circuitos e na lógica para suportar recursos auxiliares necessários na transmissão e recepção dos *1* e *0*.
+
+![[Pasted image 20260914123326.png]]
+
+- Cada conexão ponto a ponto consiste em um ou mais pares de links (lanes).
+
+![[Pasted image 20260914123514.png]]
+
+- Sem clock mestre – a codificação 128b/130b garante transições de clock suficientes para manter a sincronização.
+
+#### Distribuição PCIe Multilane
+
+![[Pasted image 20260914123544.png]]
+
+### Data Link
+
+- **Data Link Layer (DLL):** Responsável pela transmissão confiável e controle de fluxo.
+	- Gerencia o controle de fluxo, detecção de erros e correção de erros.
+	- Garante que os dados sejam transmitidos sem erros e na ordem correta.
+	- Divide os dados em pacotes menores e adiciona cabeçalhos e rodapés para verificação de erros e endereçamento.
+	- Gerencia a ordenação de pacotes e a remontagem na receptora.
+
+![[Pasted image 20260914123726.png]]
+
