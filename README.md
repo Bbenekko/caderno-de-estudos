@@ -6,4 +6,4 @@ Meu caderno de estudos na plataforma obsidian, para eu poder acessar ele de qual
 - Lingua do obsidian: Inglês
 
 ## Como fica quando está tudo certinho:
-![[anexos/Pasted image 20260914005710.png]]
+![[anexos\Pasted image 20260914005710.png]]
