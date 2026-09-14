@@ -588,11 +588,39 @@ Um **barramento** *(bus)* é um caminho elétrico comum entre múltiplos disposi
 
 ![[Pasted image 20260914005405.png]]
 
-### Arquitetura Típíca de barramento
+### Arquitetura Típica de barramento
 
 ![[Pasted image 20260914005429.png]]
 
 ### História dos barramentos
 
 Vou pular, slide 5
+
+### Arquitetura tradicional
+
+Exemplos: ISA Bus
+
+![[Pasted image 20260914010741.png]]
+
+### Arquitetura de Alto Desempenho
+
+Exemplo: PCI Bus
+
+![[Pasted image 20260914010811.png]]
+
+### Tipos de barramento
+
+#### Dedicado
+
+- Linhas separadas de dados e endereços
+
+#### Multiplexado
+
+- Linhas compartilhadas
+- Linha de controle de endereço/dado válido
+- **Vantagens**
+	- Menos Linhas
+- **Desvantagens**
+	- Circuito mais complexo
+	- Redução de desempenho
 
