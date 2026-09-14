@@ -794,3 +794,25 @@ Não vou transcrever, não parece muito necessário
 
 ![[Pasted image 20260914123726.png]]
 
+#### Pacote PCIe
+
+- DLLP carrega informações de gerenciamento do próprio link.
+- *Ex.:* mensagens de ACK *(CONFIRMAR)*, NAK *(NÃO-CONFIRMAR)*, dados de controle de energia, e controle de fluxo.
+- CRC (Checagem de Redundância Cíclica) serve para detecção de erros.
+
+![[Pasted image 20260914201508.png]]
+
+### Transaction
+
+- **Transaction Layer (TLP)**: Gera e consome pacotes de dados para implementar mecanismos de transferência de dados de carga/armazenamento (load/store) e gerencia o controle de fluxo desses pacotes entre os dois componentes em um link.
+
+![[Pasted image 20260914201615.png]]
+
+### Pacote PCIe
+
+- **Header:** contém informação sobre o tipo de transação (e.g., read/write), endereço de destino, etc.
+- **Data:** é a carga útil (payload), os dados reais que estão sendo transferidos.
+- **ECRC:** checagem derros ponta a ponta.
+
+![[Pasted image 20260914201731.png]]
+
