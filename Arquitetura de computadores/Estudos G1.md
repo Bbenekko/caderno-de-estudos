@@ -816,3 +816,262 @@ Não vou transcrever, não parece muito necessário
 
 ![[Pasted image 20260914201731.png]]
 
+---
+
+# Memória Cache
+
+## Hierarquia de Memória
+
+- Trade off custo **x** velocidade.
+- Memória dividida em níveis hierárquicos.
+- A requisição é enviada para o nível inferior seguinte até que seja atendida.
+
+![[Pasted image 20260914202025.png]]
+
+## Cache e Memória Principal
+
+![[Pasted image 20260914202112.png]]
+
+## Endereçamento da Cache
+
+- **Onde a cache se localiza?**
+	- Entre o processador e a unidade de gerenciamento de memória virtual *(MMU)*.
+	- Entre a MMU e a memória principal.
+
+- A cache lógica (virtual) armazena dados usando endereços virtuais.
+	- O processador acessa a cache diretamente.
+	- O acesso é mais rápido, antes da tradução de endereços da MMU.
+	- Endereços virtuais usam o mesmo espaço de endereçamento para diferentes aplicações.
+		- **É necessário limpar (flush) a cache em cada troca de contexto!**
+
+- A cache física armazena dados usando os endereços físicos da memória principal.
+
+
+![[Pasted image 20260914202400.png]]
+
+## Operação da Cache
+
+- A cache inclui tags para identificar qual bloco da memória principal está em cada compartimento do slot da cache
+- A CPU solicita o conteúdo de um endereço de memória
+- Verificam-se as tags presentes na cache em busca desses dados
+	- **Se** estiverem presente, são obtidos da cache (rápido)
+	- **Senão**, o bloco necessário é lido da memória principal para a cache
+- Os dados são entregues da cache para a CPU
+
+### Leitura
+
+![[Pasted image 20260914232248.png]]
+
+## Princípios de localidade
+
+- **Espacial**
+	- *O processador tende a acessar poucas áreas restritas do espaço de endereçamento.*
+
+- **Temporal**
+	- *O processador tende a acessar no futuro próximo endereços que foram acessados no passado recente.*
+
+## Definições
+
+- **Hit**: Acesso atendido pela cache
+- **Miss**: acesso **não** atendido pela cache
+- **Hit ratio**: proporção de hits
+
+$$
+h = \frac{number \ of \ accesses \ served \ by \ the \ cache}{total \ number \ of \ accesses}
+$$
+- **Miss ratio**: proporção de misses
+
+$$
+m = \frac{number \ of \ accesses \ not \ served \ by \ the \ cache}{total \ number \ of \ accesses}
+$$
+
+- Logicamente, $m + h = 1$
+
+### Exemplo:
+Considere:
+- $h$ como hit *ratio*
+- $t_{hit}$ tempo de acesso de um *hit*
+- $t_{miss}$ tempo de acesso em um *miss*
+
+O tempo médio de acesso à memória *t* **será:**
+
+$$
+t = h \ t_{hit} + (1-h)t_{miss}
+$$
+
+![[Pasted image 20260914232918.png]]
+
+### Bloco
+
+- Todo o conjunto de $2^b$ bytes em endereços consecutivos, começando em endereços cujos $b$ bits menos significativos são zero.
+- Observe que os endereços dos bytes pertencentes ao mesmo bloco são coincidentes à esquerda dos $b$ bits menos significativos.
+- A troca de dados entre a cache e a memória principal é realizada bloco a bloco.
+- Isso faz sentido? *(Eu não entendi bulhufas)*
+
+![[Pasted image 20260914233110.png]]
+
+---
+## Cache Totalmente Associativa
+
+### Arquitetura
+
+![[Pasted image 20260914233159.png]]
+
+### Operação
+
+![[Pasted image 20260914233214.png]]
+
+- O controlador da cache compara o número do bloco e o campo TAG de todas as linhas simultaneamente (busca associativa).
+- Se uma TAG coincidir com o número do bloco e o bit de validade estiver "ligado", é um *hit*, caso contrário, é um *miss*.
+- Os $b$ bits menos significativos são usados como ponteiros para o byte/palavra dentro do bloco.
+
+
+### Problema
+
+Para comparar o número do bloco com os campos TAG de todas as linhas da cache simultaneamente (busca associativa), são necessários muitos comparadores.
+
+**Consequência**
+- O design totalmente associativo (fully associative) é utilizado apenas para caches de pequena capacidade
+
+---
+## Cache com mapeamento Direto
+
+### Ideia Principal
+
+- Cada bloco da memória principal é mapeado em uma única linha da cache
+- Cada bloco só pode ser carregado na linha da cache para qual está mapeado
+- Não é mais necessário verificar todas as linhas, apenas uma.
+
+![[Pasted image 20260914233636.png]]
+
+### Operação
+
+![[Pasted image 20260914233658.png]]
+
+- O controlador da cache compara o campo de endereço à esquerda com o campo TAG da (única) linha de cache definida pelos bits *L* bits.
+
+### Problema
+
+- Algumas linhas podem ser solicitadas frequentemente por blocos diferentes...
+- Enquanto outras linhas podem ser raramente solicitadas...
+- Uso não otimizado da capacidade da cache!
+
+---
+## Cache com Conjuntos Associativos
+
+### Ideia Principal
+
+- Em vez de atribuir cada bloco da memória principal a uma única linha da cache, cada bloco é atribuído a um conjunto (associativo) de linhas da cache.
+- Um bloco pode ser carregado em qualquer linha de cache do conjunto associativo ao qual foi atribuído.
+
+![[Pasted image 20260914234215.png]]
+
+### Arquitetura
+
+![[Pasted image 20260914234249.png]]
+
+![[Pasted image 20260914234300.png]]
+### Operação
+
+![[Pasted image 20260914234318.png]]
+
+O controlador da cache compara o campo de endereço à esquerda com o campo TAG de todas as linhas do conjunto associativo definido pelos bits *S* (busca associativa).
+
+### Definições
+
+#### Cache Totalmente Associativa
+- São *caches com conjuntos associativos* que possuem apenas **um único** **conjunto** associativo.
+
+#### Cache com Mapeamento Direto
+- São *caches com conjuntos associativos* que com conjuntos que possuem apenas **uma linha** cada.
+
+#### Tamanho do Conjunto
+- Mantendo a capacidade total da cache constante e alterando o número de linhas por conjunto...
+
+![[Pasted image 20260914234633.png]]
+
+![[Pasted image 20260914234647.png]]
+
+---
+## Política de Substituição
+
+- **LRU - Least Recently Used**
+	- A linha usada menos recentemente será removida da cache abrindo espaço para um novo bloco da memória principal.
+
+- **Pseudo LRU**
+	- Exemplo:
+	- A linha usada menos recentemente, da metade usada menos recentemente, é escolhida para deixar a cache.
+
+![[Pasted image 20260914235027.png]]
+
+### Exemplo:
+
+![[Pasted image 20260914235050.png]]
+
+---
+
+## Política de Atualização da Memória Principal
+
+### Write Trought
+
+- Todas as escritas são realizadas na cache e na memória principal
+- A CPU espera até que a memória principal seja atualizada
+- **Vantagem**:
+	- A memória principal está sempre atualizada
+- **Problemas**:
+	- Grande volume de tráfego → especialmente prejudicial em multiprocessadores.
+	- 15% das referências de memória são escritas
+
+### Write Back
+
+- Cada linha de cache possui um bit *(dirty)* que indica se a cópia do bloco na cache difere da memória principal.
+- Quando o bloco é trazido da memória principal para a cache, *dirty* = 0.
+- Todas as escritas são realizadas apenas na cache, *dirty* = 1
+- A memória principal é atualizada quando o bloco selecionado para substituição tem o bit *dirty* = 1.
+
+- **E/S deve acessar a memória principal através da cache!**
+
+### Write on allocate (Miss na Escrita)
+
+- A cache traz o bloco correspondente da memória principal antes da operação de escrita.
+
+### Write Around (Miss na Escrita)
+
+- A cache não traz o bloco correspondente da memória principal e escreve o byte/palavra endereçado apenas na memória principal.
+
+---
+## Caches Multinível
+
+- A alta densidade lógica permite caches no chip
+	- Mais rápido que o acesso via barramento
+	- Libera o barramento para outras transferências
+- Comum usar tanto cache dentro quanto fora do chip
+	- L1 no chip, L2 fora do chip em RAM estática
+	- O acesso à L2 é muito mais rápido que à DRAM ou ROM
+	- A L2 frequentemente usa um caminho de dados separado
+	- A L2 pode estar no chip...
+	- Resultando na cache L3
+		- Acesso via barramento ou no chip...
+
+![[Pasted image 20260914235734.png]]
+
+## Cache Unificado vs Separada
+
+### Unificada
+
+- Uma única cache para dados e instruções
+- Maior taxa de acerto (*hit rate*)
+- Equilibra a carga de busca de instruções e de dados
+- Apenas uma cache para projetar e implementar
+
+### Separada
+
+- Uma cache para dados e outra para instruções
+- Elimina a contenção de cache entre a unidade de busca/decodificação de instruções e a unidade de execução
+	- Importante em *pipelining*
+
+
+*AQUI ACABA!!!!*
+
+---
+

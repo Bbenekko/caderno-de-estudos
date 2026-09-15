@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Recently",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -63,7 +63,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Procurar"
+              "title": "Search"
             }
           },
           {
@@ -76,7 +76,8 @@
               "title": "Marcadores"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -187,19 +188,19 @@
   },
   "active": "f9f2b559cafae53c",
   "lastOpenFiles": [
-    "Arquitetura de computadores/anexos/Pasted image 20260914201731.png",
-    "Arquitetura de computadores/anexos/Pasted image 20260914201615.png",
-    "Arquitetura de computadores/anexos/Pasted image 20260914201508.png",
-    "Arquitetura de computadores/anexos/Pasted image 20260914123726.png",
-    "Arquitetura de computadores/anexos/Pasted image 20260914123544.png",
-    "Arquitetura de computadores/anexos/Pasted image 20260914123514.png",
-    "Arquitetura de computadores/anexos/Pasted image 20260914123326.png",
-    "Arquitetura de computadores/anexos/Pasted image 20260914121929.png",
-    "Arquitetura de computadores/anexos/Pasted image 20260914121232.png",
-    "Arquitetura de computadores/anexos/Pasted image 20260914121150.png",
-    "Arquitetura de computadores/anexos/Pasted image 20260914112129.png",
-    "README.md",
+    "Arquitetura de computadores/anexos/Pasted image 20260914235734.png",
+    "Arquitetura de computadores/anexos/Pasted image 20260914235050.png",
+    "Arquitetura de computadores/anexos/Pasted image 20260914235027.png",
+    "Arquitetura de computadores/anexos/Pasted image 20260914235020.png",
+    "Arquitetura de computadores/anexos/Pasted image 20260914235019.png",
+    "Arquitetura de computadores/anexos/Pasted image 20260914235012.png",
+    "Arquitetura de computadores/anexos/Pasted image 20260914234934.png",
+    "Arquitetura de computadores/anexos/Pasted image 20260914234647.png",
+    "Arquitetura de computadores/anexos/Pasted image 20260914234633.png",
+    "Arquitetura de computadores/anexos/Pasted image 20260914234318.png",
+    "Arquitetura de computadores/anexos/Pasted image 20260914234300.png",
     "Arquitetura de computadores/Estudos G1.md",
+    "README.md",
     "anexos",
     "Circuitos 2/O que preciso estudar.md",
     "Circuitos 2/Notas importante.md",
