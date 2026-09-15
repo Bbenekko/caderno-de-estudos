@@ -195,6 +195,8 @@ Quantos bits extra serão necessários **(r=?)**?
 
 ## Código de Hamming
 
+https://youtu.be/yx79VIMEBMw?si=XJIhTtxUbpRstnZ6
+
 Construindo um código de correção de *1* erro simples para $2^m$ palavras
 - Acrescentam-se **r** bits de paridade: total de $m+r$ bits por palavra
 - Bits são numerados de 1 a $m+r$

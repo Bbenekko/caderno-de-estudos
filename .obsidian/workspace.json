@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "74ca35d53917888f",
+        "id": "798b51041859ac40",
         "type": "tabs",
         "children": [
           {
-            "id": "f9f2b559cafae53c",
+            "id": "4cc28c94c7fba163",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Recently",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,8 +76,7 @@
               "title": "Marcadores"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -186,8 +185,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "f9f2b559cafae53c",
+  "active": "4cc28c94c7fba163",
   "lastOpenFiles": [
+    "Arquitetura de computadores/Estudos G1.md",
     "Arquitetura de computadores/anexos/Pasted image 20260914235734.png",
     "Arquitetura de computadores/anexos/Pasted image 20260914235050.png",
     "Arquitetura de computadores/anexos/Pasted image 20260914235027.png",
@@ -198,8 +198,6 @@
     "Arquitetura de computadores/anexos/Pasted image 20260914234647.png",
     "Arquitetura de computadores/anexos/Pasted image 20260914234633.png",
     "Arquitetura de computadores/anexos/Pasted image 20260914234318.png",
-    "Arquitetura de computadores/anexos/Pasted image 20260914234300.png",
-    "Arquitetura de computadores/Estudos G1.md",
     "README.md",
     "anexos",
     "Circuitos 2/O que preciso estudar.md",
