@@ -435,8 +435,7 @@ Na **DRAM Síncrona (SDRAM)**, uma vez estabelecidos os endereços iniciais de l
 ![[Pasted image 20260913200826.png]]
 
 #### DDR SDRAM
-A **SDRAM de Taxa de Transferência Dobrada (DDR SDRAM)** acessa dados tanto na borda de
-subida quanto na de descida do ciclo de clock, após os endereços de linha e coluna terem sido definidos.
+A **SDRAM de Taxa de Transferência Dobrada (DDR SDRAM)** acessa dados tanto na borda de subida quanto na de descida do ciclo de clock, após os endereços de linha e coluna terem sido definidos.
 
 ![[Pasted image 20260913200914.png]]
 
