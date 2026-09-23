@@ -66,3 +66,30 @@ $$
 $$
 \tau = \frac{1}{|\alpha|} \ \text{onde} \ \alpha = \Re \{ \lambda_i \}
 $$
+
+# Calc IV
+
+## Soma e Produto
+
+$$
+S = \frac{-b}a \ \ \ \ P = \frac ca
+$$
+
+Sendo S a soma das raízes e P o produto
+
+## Fatoração de polinômio de segundo grau
+
+$$
+ax^2 + bx + c = 0 \ \ \ \ \text{ou} \ \ \ \ a(x-r_1)(x-r_2)
+$$
+
+
+## Equações diferenciais
+
+$$
+y(t) = y_h(t) + y_p(t)
+$$
+
+onde $y_h$ é solução homogenea e $y_p$ é solução particular
+
+### Solução homogenea
