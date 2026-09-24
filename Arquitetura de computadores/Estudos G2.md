@@ -498,6 +498,20 @@ As duas palavras-chave:
 
 ---
 
+## Questões:
 
+- Como identificar o módulo que emitiu a interrupção
+- Como lidar com múltiplas interrupções?
 
+## Técnicas de identificação do módulo 
 
+- Linha diferente para cada módulo
+	- **limita o número de dispositivos**
+
+- Varredura de Software (Polling)
+	- CPU pergunta a cada módulo por vez -> Lento
+
+- Mestre de barramento (Bus Master)
+	- Módulo deve reinvindicar o barramento antes de interromper
+
+- 
