@@ -1,5 +1,10 @@
 # Capacitores e Indutores
 
+## Capacitor em série
+
+![[Pasted image 20260923182814.png]]
+
+Capacitores em série podem ser substituídos por um capacitor equivalente (somado se n me engano)
 ## Capacitor em regime permanente:
 
 **Quando a fonte está desligada:**
@@ -93,3 +98,19 @@ $$
 onde $y_h$ é solução homogenea e $y_p$ é solução particular
 
 ### Solução homogenea
+
+Para circuitos, é quando as fontes **independentes** *(controladas não conta)* são desligadas e são consideradas apenas as condições iniciais
+
+![[Pasted image 20260923183204.png]]
+### Solução particular
+
+Solução obtida quando as condições iniciais são nulas e é considerado apenas a fonte
+
+![[Pasted image 20260923183308.png]]
+
+Iremos fazer por transformada de Laplace
+
+$$
+V_{out}(s) = H(s)V_{in}(s)
+$$
+
