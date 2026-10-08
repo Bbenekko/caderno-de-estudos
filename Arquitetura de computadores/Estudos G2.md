@@ -513,5 +513,143 @@ As duas palavras-chave:
 
 - Mestre de barramento (Bus Master)
 	- Módulo deve reinvindicar o barramento antes de interromper
+ 
+- Daisy Chain (Encadeamento) ou Varredura por Hardware:
+	- Reconhecimento de interrupção (~acesso de leitura)
+		- Enviado em cadeia
+		- Em paralelo para todos os dispositivos
+	- Módulo coloca o vetor no barramento
+	- CPU usa o vetor para identificar a rotina
 
-- 
+
+## DMA (Acesso Direto à Memória)
+
+**Desvantagens das estratégias de E/S anteriores:**
+- Ambas requerem intervenção ativa da CPU
+	- Taxa de transferência limitada
+	- CPU fica ocupada
+
+**DMA é a resposta!**
+- Módulo adicional (hardware) no barramento
+- Controlador DMA assume o controle da CPU para a E/S
+
+![[Pasted image 20261008091410.png]]
+### Diagrama
+
+![[Pasted image 20261008091426.png]]
+
+### Operação da DMA
+
+![[Pasted image 20261008091752.png]]
+
+- **CPU** diz ao controlador **DMA**
+- **CPU** continua com **outro trabalho**
+- Controlador **DMA** lida com a **trasferência**
+- Controlador **DMA envia interrupção** quando terminar
+
+### Modos de transferência DMA
+
+![[Pasted image 20261008092133.png]]
+
+Tanto em *block mode* quanto em *cycle stealing*:
+- CPU é **suspensa, não interrompida**
+	- CPU não troca de contexto
+- **CPU é suspensa logo antes de acessar o barramento**
+	- *Ex:* antes da busca de dado ou operando, ou da escrita de dados
+- Reduz o desempenho da CPU, mas não tanto quanto quando a própria CPU realiza a transferência
+
+---
+
+![[Pasted image 20261008092316.png]]
+
+## Configurações de DMA
+
+- Barramento único, controlador DMA separado
+
+![[Pasted image 20261008093433.png]]
+
+---
+- Barramento único, controlador DMA integrado à E/S
+	- O controlador pode suportar mais de um dispositivo
+
+![[Pasted image 20261008093525.png]]
+
+---
+- Barramento de E/S separado
+	- O barramento suporta todos os dispositivos habilitados para DMA
+
+![[Pasted image 20261008093611.png]]
+
+---
+
+## Canais e Processadores de E/S
+
+- Módulos de E/S aprimorados com **processador programável** embutido
+	- Se compartilha a memória do sistema - > **Canal de E/S**
+	- Se tem sua própria memória - > **Processador de E/S**
+
+- CPU instrui o canal/processador a fazer a transferência
+- O canal/processador de E/S realiza toda a transferência e interrompe a CPU ao final.
+- **Melhora a velocidade geral do sistema**
+- *Ex:* Placas gráficas 3d
+
+### Canal Seletor
+
+- Controla múltiplos dispositivos de alta velocidade
+- Dedicado a um por vez
+-  **Cada** (ou **pequeno conjunto**) dispositivo é gerenciador por um controlador.
+- O Canal de E/S serve no lugar da CPU para controlar esses controladores de E/S.
+
+![[Pasted image 20261008095652.png]]
+
+### Multiplexor channel
+
+- Gerencia múltiplos dispositivos ao mesmo tempo
+
+![[Pasted image 20261008095745.png]]
+
+---
+## DCA (Acesso Direto ao Cache)
+
+- O DMA convencional transfere dados entre E/S e a memória principal.
+- O DCA fornece um atalho sobre a memória principal e permite transferência direta entre E/S e o cache de nível mais baixo (mais próximo da CPU).
+
+
+---
+
+# Suporte ao Sistema operacional
+## Visão geral do Sistema operacional
+
+### Objetivos e Funções
+
+- **Conveniência**
+- **Eficiência**
+
+### Camadas e visões
+
+![[Pasted image 20261008101613.png]]
+
+### Serviços do SO
+
+1. **Criação de programa:** Serviços como editores e depuradores que auxiliam o programador
+2. **Execução de programas:** Controlar o acesso aos recursos do sistema para evitar mau uso
+3. **Acesso a dispositivos de E/S:** Fornece uma interação de alto nível com hardware
+4. **Acesso controlado a arquivos:** Cuida dos detalhes de como os arquivos são gravados e lidos
+5. **Detecção e Reação a Erros:** Resposta a falhas para minimizar o impacto na execução
+6. **Contabilização:** Monitora o desempenho (tempo de resposta, uso de CPU e memória)
+
+*A SO TAMBÉM é um programa executado pelo processador!*
+
+### Tipos de SO
+
+**Batch (Lote):** Após o início da execução, o usuário só vê o resultado final
+V.S.
+**Interativo:** O usuário interage durante a execução
+
+**UniProgramado:** A CPU executa apenas um programa por vez
+V.S.
+**MultiProgramado:** A CPU alterna entre vários programas carregados
+
+---
+## Escalonamento
+
