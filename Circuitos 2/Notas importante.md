@@ -114,3 +114,11 @@ $$
 V_{out}(s) = H(s)V_{in}(s)
 $$
 
+
+
+# Impedância e Admitância
+
+Admitância é o inverso da impedância
+
+==Não esquecer do caso de que o circuito RLC paralelo (dos 3)==
+
